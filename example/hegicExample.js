@@ -10,7 +10,7 @@ const hegicPriceProvider = new HegicPriceProvider(provider);
 
 const expiry = '1612137600';
 
-hegicPriceProvider.getHegicPrice(
+hegicPriceProvider.getPrice(
     wbtcPool,
     BigNumber.from(expiry),
     BigNumber.from('1000000000000000000'),

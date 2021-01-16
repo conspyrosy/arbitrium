@@ -6,7 +6,7 @@ class HegicPriceProvider {
         this.provider = provider;
     }
 
-    async getHegicPrice(optionInfo, expiry, amount, strike, isCall) {
+    async getPrice(optionInfo, expiry, amount, strike, isCall) {
         const hegicOptions = new ethers.Contract(
             optionInfo.pool,
             hegicOptionsABI,
