@@ -13,7 +13,7 @@ const period = 3600 * 24 * 7; // 1 week in seconds
 hegicPriceProvider.getPrice(
     wbtcPool,
     BigNumber.from(period),
-    BigNumber.from('1'),
+    BigNumber.from(1 * 10 ** wbtcPool.decimals),
     BigNumber.from(35000 * 10 ** wbtcPool.decimals),
     true
 ).then(
