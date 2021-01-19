@@ -8,14 +8,14 @@ const provider = new ethers.providers.JsonRpcProvider(process.env.PROVIDER_URL);
 
 const hegicPriceProvider = new HegicPriceProvider(provider);
 
-const expiry = '1612137600';
+const period = 3600 * 24 * 7; // 1 week in seconds
 
 hegicPriceProvider.getPrice(
     wbtcPool,
-    BigNumber.from(expiry),
-    BigNumber.from('1000000000000000000'),
-    BigNumber.from('35000000000000000000000'),
+    BigNumber.from(period),
+    BigNumber.from('1'),
+    BigNumber.from(35000 * 10 ** wbtcPool.decimals),
     true
 ).then(
-    res => console.log("HEGIC PRICE: " + JSON.stringify(res))
+    res => console.log("HEGIC PRICE: " + res)
 );
