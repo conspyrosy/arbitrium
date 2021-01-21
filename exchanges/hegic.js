@@ -21,13 +21,8 @@ class HegicExchange {
             this.provider
         );
 
-        return await hegicOptions.fees(
-            period,
-            amount,
-            strike,
-            isCall ? '2' : '1'
-        );
-    }
+    return hegicOptions.fees(period, amount, strike, isCall ? '2' : '1');
+  }
 }
 
 module.exports = HegicExchange;
