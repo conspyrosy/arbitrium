@@ -1,13 +1,14 @@
 const { ethers } = require('ethers');
 const hegicOptionsABI = require('../abi/hegic_options.json');
 
-class HegicPriceProvider {
+class HegicExchange {
     constructor(provider) {
         this.provider = provider;
     }
 
     /**
      * @notice Used for getting the actual options prices
+     * @param optionInfo Option period in seconds (1 days <= period <= 4 weeks)
      * @param period Option period in seconds (1 days <= period <= 4 weeks)
      * @param amount Option amount
      * @param strike Strike price of the option
@@ -29,4 +30,4 @@ class HegicPriceProvider {
     }
 }
 
-module.exports = HegicPriceProvider;
+module.exports = HegicExchange;

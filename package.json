@@ -24,6 +24,8 @@
   "homepage": "https://github.com/conspyrosy/arbitrium#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "ethers": "^5.0.26"
+    "ethers": "^5.0.26",
+    "node-fetch": "^2.6.1",
+    "ws": "^7.4.2"
   }
 }
