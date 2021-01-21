@@ -10,10 +10,12 @@ const hegicExchange = new HegicExchange(provider);
 
 const period = 3600 * 24 * 7; // 1 week in seconds
 
-hegicExchange.getPrice(
+hegicExchange
+  .getPrice(
     wbtcPool,
     BigNumber.from(period),
     BigNumber.from(10 ** wbtcPool.decimals),
     BigNumber.from(35000 * 10 ** wbtcPool.decimals),
     true
-).then((res) => console.log(`HEGIC PRICE: ${res}`));
+  )
+  .then((res) => console.log(`HEGIC PRICE: ${res}`));
