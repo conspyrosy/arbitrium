@@ -1,4 +1,5 @@
 const WebSocket = require('ws');
+const { ContractWrappers } = require('@0x/contract-wrappers');
 
 const ws = new WebSocket('wss://api.0x.org/sra/v3', {
   perMessageDeflate: false,

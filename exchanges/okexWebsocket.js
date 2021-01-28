@@ -7,7 +7,7 @@ const ws = new WebSocket('wss://real.okex.com:8443/ws/v3', {
 
 ws.on('open', function open() {
   ws.send(
-    JSON.stringify({ op: 'subscribe', args: ['option/instruments:BTC-USD'] })
+    JSON.stringify({ op: 'subscribe', args: ['option/summary:BTC-USD'] })
   );
 });
 

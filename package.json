@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/conspyrosy/arbitrium#readme",
   "dependencies": {
+    "@0x/contract-wrappers": "^13.12.2",
     "dotenv": "^8.2.0",
     "ethers": "^5.0.26",
     "node-fetch": "^2.6.1",
